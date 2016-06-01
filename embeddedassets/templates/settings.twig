@@ -29,4 +29,26 @@
 		addRowLabel: "Add a parameter"|t
 	}) }}
 
+	<hr>
+
+	{{ forms.textField({
+		label: "Embed.ly API Key"|t,
+		instructions: "Add Embed.ly integration."|t,
+		class: 'code',
+		id: 'embedlyApiKey',
+		name: 'embedlyApiKey',
+		value: settings.embedlyApiKey
+	}) }}
+
+	<hr>
+
+	{{ forms.textField({
+		label: "Iframely API Key"|t,
+		instructions: "Add Iframely integration."|t,
+		class: 'code',
+		id: 'iframelyApiKey',
+		name: 'iframelyApiKey',
+		value: settings.iframelyApiKey
+	}) }}
+
 </div>

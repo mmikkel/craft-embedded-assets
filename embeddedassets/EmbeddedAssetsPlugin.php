@@ -215,6 +215,8 @@ class EmbeddedAssetsPlugin extends BasePlugin
 				'maxwidth' => 1280,
 				'maxheight' => 960,
 			)),
+			'embedlyApiKey' => AttributeType::String,
+			'iframelyApiKey' => AttributeType::String,
 		);
 	}
 
@@ -231,7 +233,9 @@ class EmbeddedAssetsPlugin extends BasePlugin
 			{
 				return trim($domain);
 			}, explode(PHP_EOL, $postSettings['whitelist'])),
-			'parameters' => array()
+			'parameters' => array(),
+			'embedlyApiKey' => $postSettings['embedlyApiKey'],
+			'iframelyApiKey' => $postSettings['iframelyApiKey'],
 		);
 
 		foreach($postSettings['parameters'] as $parameter)
